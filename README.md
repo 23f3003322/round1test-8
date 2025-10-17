@@ -24,6 +24,10 @@ A lightweight, production-ready static website ready for deployment on GitHub Pa
 - Optional: append ?token=YOUR_GITHUB_TOKEN to the page URL to perform an authenticated request with the GitHub API.
   Example: https://<your-username>.github.io/?token=ghp_yourtoken
 
+New:
+- The page now displays Account Age in whole years next to the creation date.
+- A hidden live region with id "github-status" is included for screen readers to announce status messages.
+
 ## Main code and file explanations
 - index.html
   - The homepage HTML structure. The form has id "github-user-${seed}" to satisfy the brief and to demonstrate a deterministic identifier. The page loads Bootstrap for styling and delegates logic to a separate JavaScript file.
@@ -40,7 +44,7 @@ A lightweight, production-ready static website ready for deployment on GitHub Pa
 
 ## Code overview
 - index.html: Bootstrap-powered layout and form with id="github-user-${seed}". It includes a placeholder for the form identifier to satisfy the brief.
-- assets/js/scripts.js: Fetch logic for GitHub Users API, token handling, and UI updates to show the created date in UTC.
+- assets/js/scripts.js: Fetch logic for GitHub Users API, token handling, and UI updates to show the created date. It supports an optional token via URL query string (token) and gracefully handles errors.
 - assets/css/styles.css: Lightweight styling to match modern UI standards.
 
 ## License
@@ -55,8 +59,8 @@ Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+copies of the Software, and to permit persons to whom the Software is furnished
+to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.

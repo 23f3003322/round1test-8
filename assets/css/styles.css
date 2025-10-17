@@ -1,0 +1,7 @@
+/* Minimal styling to complement Bootstrap */
+body {
+  background-color: #f8f9fa;
+}
+.container {
+  padding-top: 2rem;
+}
